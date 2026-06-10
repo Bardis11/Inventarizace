@@ -1,0 +1,18 @@
+{
+  "name": "tomas-datify-backend",
+  "version": "1.0.0",
+  "description": "Datify backend pro správu smluv, aut a majetku",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "sqlite": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.0"
+  }
+}
