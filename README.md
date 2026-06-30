@@ -2,28 +2,28 @@
 
 Lokální aplikace pro správu smluv, vozového parku a majetku s role-based access control.
 
-## ✨ Funkce
+##  Funkce
 
-- **📋 Správa smluv** - Evidence smluv s termíny, sledování vypršení
-- **🚗 Vozový park** - Správa vozidel, STK, pojištění, údržba
-- **🏠 Majetek** - Inventář majetku, revize, záruky
-- **⚡ Dashboard** - Přehled upozornění a stav všech dat
-- **🔒 Role-based access** - Přístup podle role (admin, smlouvy, auta, majetek)
-- **🎯 Filtrování a vyhledávání** - Snadná orientace v datech
+- ** Správa smluv** - Evidence smluv s termíny, sledování vypršení
+- ** Vozový park** - Správa vozidel, STK, pojištění, údržba
+- ** Majetek** - Inventář majetku, revize, záruky
+- ** Dashboard** - Přehled upozornění a stav všech dat
+- ** Role-based access** - Přístup podle role (admin, smlouvy, auta, majetek)
+- ** Filtrování a vyhledávání** - Snadná orientace v datech
 
-## 🛠️ Technologický stack
+##  Technologický stack
 
 - **Backend:** Node.js + Express + SQLite
 - **Frontend:** React + Axios
 - **Autentizace:** Dummy login (pro produkci lze napojit na Active Directory)
 
-## 📋 Požadavky
+##  Požadavky
 
 - Node.js v18+ (https://nodejs.org/)
 - npm (součást Node.js)
 - Git (volitelně pro clone projektu)
 
-## 🚀 Instalace & spuštění
+##  Instalace & spuštění
 
 ### 1. Naklonuj projekt nebo stáhni soubory
 
@@ -56,7 +56,7 @@ Frontend poběží na `http://localhost:3000`
 
 Jdi na: **http://localhost:3000**
 
-## 🔑 Přihlášení (Demo)
+##  Přihlášení (Demo)
 
 ```
 Email: demo@tomas.cz
@@ -69,7 +69,7 @@ Role (vyber si jednu):
 - majetek (vidí jen majetek)
 ```
 
-## 📂 Struktura projektu
+##  Struktura projektu
 
 ```
 tomas-datify/
@@ -132,7 +132,7 @@ tomas-datify/
 - `POST /api/assets/:id/revisions` - Přidat revizi
 - `DELETE /api/assets/:id` - Smazání majetku
 
-## 🔔 Notifikace
+##  Notifikace
 
 Aplikace automaticky varuje na:
 - **Smlouvy expirující za <30 dní** (warning)
@@ -142,13 +142,13 @@ Aplikace automaticky varuje na:
 - **Revize majetku po lhůtě** (critical)
 - **Revize majetku za <30 dní** (warning)
 
-## 🗄️ Databáze
+##  Databáze
 
 SQLite databáze se vytváří automaticky v `backend/data/tomas.db`
 
 Pokud chceš resetovat data, jednoduše smaž soubor `tomas.db` a restartuj backend.
 
-## 🔐 Bezpečnost
+##  Bezpečnost
 
 V aktuální verzi je to dummy login pro testování. Pro produkci lze snadno napojit:
 
@@ -158,7 +158,7 @@ V aktuální verzi je to dummy login pro testování. Pro produkci lze snadno na
 
 Upravit: `backend/src/routes/auth.js`
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 ### Port 3000/3001 je obsazený
 ```bash
@@ -188,13 +188,13 @@ rm backend/data/tomas.db
 # Restartuj backend
 ```
 
-## 📝 Poznámky
+##  Poznámky
 
 - Všechna data jsou uložena lokálně v SQLite
 - Demo data se vloží automaticky při prvním spuštění
 - Aplikace běží pouze na localhost (není online)
 
-## 🚀 Další vývoj
+##  Další vývoj
 
 Možnosti k rozšíření:
 - Napojení na skutečný AD/Azure AD
@@ -204,14 +204,14 @@ Možnosti k rozšíření:
 - Více uživatelů s rolemi
 - Integrace s účetním softwarem
 
-## 📞 Support
+##  Support
 
 Pokud máš problém:
 1. Zkontroluj console (DevTools F12 v prohlížeči)
 2. Zkontroluj backend logs v terminálu
 3. Zkus restartovat backend a frontend
 
-## 📄 Licence
+##  Licence
 
 Projekt je určen pro vnitřní použití v podniku.
 
