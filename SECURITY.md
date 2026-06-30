@@ -1,8 +1,8 @@
-# 🔒 DANZER Inventory - Bezpečnostní Guidelines
+# Inventory - Bezpečnostní Guidelines
 
 ## Důležité bezpečnostní opatření
 
-### 1️⃣ Environment Variables (.env)
+### 1️ Environment Variables (.env)
 
 **NIKDY** necommituj `.env` soubor do Gitu!
 
@@ -14,7 +14,7 @@ cp backend/.env.example backend/.env
 nano backend/.env
 ```
 
-### 2️⃣ JWT Secret - KRITICKÉ!
+### 2️ JWT Secret - KRITICKÉ!
 
 V **produkci** MUSÍŠ změnit `JWT_SECRET` na silný klíč:
 
@@ -26,7 +26,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 JWT_SECRET=tvůj-generovaný-super-silný-klíč-zde
 ```
 
-### 3️⃣ CORS - Omez na tvoji doménu
+### 3️ CORS - Omez na tvoji doménu
 
 **Development:**
 ```
@@ -38,7 +38,7 @@ CORS_ORIGIN=http://localhost:3000
 CORS_ORIGIN=https://tvoje-domena.cz
 ```
 
-### 4️⃣ Input Validation
+### 4️ Input Validation
 
 Všechny inputy jsou **sanitizované** a **validované**:
 - ✅ SPZ - formát kontrola
@@ -47,14 +47,14 @@ Všechny inputy jsou **sanitizované** a **validované**:
 - ✅ Stringy - XSS ochrany (& < > " ')
 - ✅ Soubory - typ a velikost kontrola
 
-### 5️⃣ File Upload - Bezpečnost
+### 5️ File Upload - Bezpečnost
 
 - ✅ Max 5MB
 - ✅ Jen obrázky (JPEG, PNG, WebP)
 - ✅ Uložení mimo root
 - ✅ Randomizované jméno
 
-### 6️⃣ Database - Prepared Statements
+### 6️ Database - Prepared Statements
 
 Všechny SQL queries používají **prepared statements** - chráněno proti SQL injection:
 
@@ -66,7 +66,7 @@ db.run('SELECT * FROM users WHERE id = ?', [userId], ...)
 db.run(`SELECT * FROM users WHERE id = ${userId}`, ...)
 ```
 
-### 7️⃣ JWT Token Expiry
+### 7️ JWT Token Expiry
 
 Tokeny expirují po **7 dnech** - jsou si vynuceni znovu se přihlásit.
 
@@ -74,7 +74,7 @@ Tokeny expirují po **7 dnech** - jsou si vynuceni znovu se přihlásit.
 JWT_EXPIRY=7d
 ```
 
-### 8️⃣ HTTPS - Produkce
+### 8️ HTTPS - Produkce
 
 V produkci **MUSÍŠ** použít HTTPS:
 
@@ -84,13 +84,13 @@ V produkci **MUSÍŠ** použít HTTPS:
 # Heroku, Railway, atd. s SSL
 ```
 
-### 9️⃣ Rate Limiting
+### 9️ Rate Limiting
 
 Chráněno proti brute-force útokům:
 - Max 100 requestů za 15 minut
 - Automatický reset
 
-### 🔟 Logging
+### 10 Logging
 
 Všechny **error** a **warn** события jsou logovány:
 
@@ -101,7 +101,7 @@ LOG_LEVEL=warn  # Produkce
 
 ---
 
-## 📋 Deployment Checklist
+##  Deployment Checklist
 
 Před nasazením do produkce:
 
@@ -116,7 +116,7 @@ Před nasazením do produkce:
 
 ---
 
-## 🚨 Pokud zjistíš bezpečnostní chybu
+##  Pokud zjistíš bezpečnostní chybu
 
 1. Nehlásej ji veřejně
 2. Kontaktuj admina prímo
@@ -124,4 +124,4 @@ Před nasazením do produkce:
 
 ---
 
-**Bezpečnost není jednorázový projekt - je to kontinuální proces!** 🔒
+**Bezpečnost není jednorázový projekt - je to kontinuální proces!** 
