@@ -1,3 +1,4 @@
+VIBE CODE APPLIKACE!!!!!!!
 #Správa firemních dat
 
 Lokální aplikace pro správu smluv, vozového parku a majetku s role-based access control.
